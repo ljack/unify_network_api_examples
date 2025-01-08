@@ -1,11 +1,11 @@
 meta {
-  name: get devices
+  name: get info
   type: http
-  seq: 3
+  seq: 1
 }
 
 get {
-  url: {{host}}/v1/sites/{{siteId}}/devices
+  url: {{host}}/v1/info
   body: none
   auth: inherit
 }

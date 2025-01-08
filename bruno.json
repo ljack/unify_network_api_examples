@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Unify Network v9 API",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

@@ -1,0 +1,15 @@
+meta {
+  name: get devices
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/v1/sites/{{siteId}}/devices
+  body: none
+  auth: inherit
+}
+
+vars:post-response {
+  data: res.body.data
+}

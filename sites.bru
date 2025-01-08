@@ -1,0 +1,15 @@
+meta {
+  name: sites
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/v1/sites
+  body: none
+  auth: inherit
+}
+
+vars:post-response {
+  siteId: data.data[0].id
+}

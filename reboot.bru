@@ -1,0 +1,17 @@
+meta {
+  name: reboot
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{host}}/v1/sites/{{siteId}}/devices/{{deviceId}}/actions
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "RESTART"
+  }
+}

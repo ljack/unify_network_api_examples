@@ -1,0 +1,38 @@
+meta {
+  name: loop through all deviceIds
+  type: http
+  seq: 3
+}
+
+get {
+  url: 
+  body: none
+  auth: inherit
+}
+
+script:pre-request {
+  
+  
+  
+  
+  let data = bru.getVar("data");
+  for (const d of data) {
+    console.log(d.id, d.name) ;
+    if( d.name === 'Dream Machine SE') {
+      console.log("SKipping "+d.name);
+      continue;
+    }
+    
+    
+    bru.setVar("deviceId",d.id)
+    // const requestResponse = await bru.runRequest('reboot');
+    let requestResponse = {};
+    console.log(requestResponse );
+    bru.sleep(5000*10)
+  }
+  console.log("Done");
+  bru.setNextRequest(null);
+  bru.runner.stopExecution();
+  
+  
+}
